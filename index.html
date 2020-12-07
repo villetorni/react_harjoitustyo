@@ -1,18 +1,93 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport"
-      content="width=device-width, initial-scale=1" />
-    <title>React App</title>
-  </head>
-  <body>
 
-    <div id="root"></div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>React App</title>
+</head>
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-  </body>
+
+<body>
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+    class MyForm extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          maalin_nimi: '',
+          hinta: null,
+        };
+      }
+      mySubmitHandler = (event) => {
+        event.preventDefault();
+        let hinta = this.state.hinta;
+        let riittoisuus = this.state.riittoisuus;
+        let maalin_maara = this.state.maara;
+        if (!Number(hinta)) {
+          alert("Arvo oltava numero");
+        } else if (!Number(riittoisuus)) {
+          alert("Arvo oltava numero")
+        } else if (!Number(maalin_maara)) {
+          alert("Arvo oltava numero")
+
+
+        }
+      }
+      //Ei varmaa tieto mitä tämä tekee, esimerkkki löytyy alla olevasta linkistä
+      // https://www.w3schools.com/react/showreact.asp?filename=demo2_react_forms_validate_onsubmit
+      myChangeHandler = (event) => {
+        let nam = event.target.name;
+        let val = event.target.value;
+        this.setState({ [nam]: val });
+      }
+      render() {
+        return (
+          <form onSubmit={this.mySubmitHandler}>
+            <h1>Maalilaskuri</h1>
+            <p>Maalin nimi:</p>
+            <input
+              type='text'
+              name='maalin_nimi'
+              onChange={this.myChangeHandler}
+            />
+            <p>Maalin hinta (€/l):</p>
+            <input
+              type='text'
+              name='hinta'
+              onChange={this.myChangeHandler}
+            />
+            <p>Maalin riittoisuus (m2/l):</p>
+            <input
+              type='text'
+              name='riittoisuus'
+              onChange={this.myChangeHandler}
+            />
+            <p>Maalauskertojen määrä:</p>
+            <input
+              type='text'
+              name='maara'
+              onChange={this.myChangeHandler}
+            />
+
+            <br />
+            <br />
+            <input type='submit' />
+          </form>
+        );
+      }
+    }
+
+    ReactDOM.render(<MyForm />, document.getElementById('root'));
+
+
+  </script>
+
+</body>
+
 </html>
-=======
-
->>>>>>> fa5bb37955cbeba6ec75b03606ab6e6e39761ac9
