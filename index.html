@@ -20,8 +20,13 @@
       constructor(props) {
         super(props);
         this.state = {
+          asunto: "Kaksio",
           maalin_nimi: '',
           hinta: null,
+          riittoisuuss: null,
+          maalin_maara: null,
+
+
         };
       }
       mySubmitHandler = (event) => {
@@ -50,6 +55,12 @@
         return (
           <form onSubmit={this.mySubmitHandler}>
             <h1>Maalilaskuri</h1>
+
+            <select value={this.state.asunto}>
+              <option value="Kaksio">2 h + kk -asunto</option>
+              <option value="Kolmio">3 h + k -asunto </option>
+            </select>
+
             <p>Maalin nimi:</p>
             <input
               type='text'
