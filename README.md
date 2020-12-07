@@ -1,3 +1,3 @@
 # react_harjoitustyo
 wääwää
-testi pullaus
+testi push
