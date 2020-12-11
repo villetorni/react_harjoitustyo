@@ -2,7 +2,7 @@
   "name": "recipe-app",
   "version": "2.0.0",
   "description": "Learning React Chapter 5 sample for modular recipes with webpack",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",
     "prestart": "npm run build",
