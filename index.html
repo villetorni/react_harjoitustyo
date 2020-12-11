@@ -40,6 +40,7 @@ img {display: block;
 
 
         };
+        this.handleApartmentChange = this.handleApartmentChange.bind(this);
       }
       mySubmitHandler = (event) => {
         event.preventDefault();
@@ -63,12 +64,18 @@ img {display: block;
         let val = event.target.value;
         this.setState({ [nam]: val });
       }
+
+      handleApartmentChange(event) {
+        this.setState({asunto: event.target.value});
+        alert(event.target.value);
+      }
+
       render() {
         return (
           <form onSubmit={this.mySubmitHandler}>
             <h1>Maalilaskuri</h1>
 
-            <select value={this.state.asunto}>
+            <select value={this.state.asunto}  onChange={this.handleApartmentChange}>
               <option value="Kaksio">2 h + kk -asunto</option>
               <option value="Kolmio">3 h + k -asunto </option>
             </select>
