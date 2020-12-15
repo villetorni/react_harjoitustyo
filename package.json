@@ -1,7 +1,7 @@
 {
-  "name": "recipe-app",
+  "name": "maalilaskuri",
   "version": "2.0.0",
-  "description": "Learning React Chapter 5 sample for modular recipes with webpack",
+  "description": "Harjoitustyö",
   "main": "index.html",
   "scripts": {
     "build": "webpack --mode development",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MoonHighway/learning-react.git"
+    "url": "https://github.com/villetorni/react_harjoitustyo"
   },
   "keywords": [
     "Learning",
@@ -22,9 +22,9 @@
   "author": "Alex Banks <alex@moonhighway.com> (http://www.moonhighway.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MoonHighway/learning-react/issues"
+    "url": "https://github.com/villetorni/react_harjoitustyo"
   },
-  "homepage": "https://github.com/MoonHighway/learning-react#readme",
+  "homepage": "https://github.com/villetorni/react_harjoitustyo",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
